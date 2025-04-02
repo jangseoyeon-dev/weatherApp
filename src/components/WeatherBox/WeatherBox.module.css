@@ -1,0 +1,16 @@
+.box {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box p,
+.box h2,
+.box h3 {
+  margin: 2px 0; /* 요소 간 최소한의 간격 */
+}
