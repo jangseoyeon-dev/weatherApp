@@ -15,7 +15,7 @@ body {
 }
 
 .main.sunny {
-  background-image: url("./clear_sky.jpg");
+  background-image: url("clear_sky.jpg");
 }
 .main.fewCloudy {
   background-image: url("./few_clouds.jpg");
