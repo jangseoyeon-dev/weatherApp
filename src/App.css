@@ -15,22 +15,22 @@ body {
 }
 
 .main.sunny {
-  background-image: url("clear_sky.jpg");
+  background-image: url("/clear_sky.jpg");
 }
 .main.fewCloudy {
-  background-image: url("./few_clouds.jpg");
+  background-image: url("/few_clouds.jpg");
 }
 .main.cloudy {
-  background-image: url("./broken_clouds.jpg");
+  background-image: url("/broken_clouds.jpg");
 }
 .main.rainy {
-  background-image: url("./rain.jpg");
+  background-image: url("/rain.jpg");
 }
 .main.thunderstorm {
-  background-image: url("./thunderstorm.jpg");
+  background-image: url("/thunderstorm.jpg");
 }
 .main.snow {
-  background-image: url("./snow.jpg");
+  background-image: url("/snow.jpg");
 }
 
 .buttons {
