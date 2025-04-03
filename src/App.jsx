@@ -35,9 +35,8 @@ function App() {
     try {
       let response = await fetch(url);
       let data = await response.json();
-      console.log(data);
       handleBackgroundChange(data.weather[0].description);
-      setWeather(data);
+      setWeather(() => data);
       setLoading(false);
     } catch (error) {
       setAPIError(error);
@@ -46,7 +45,7 @@ function App() {
   };
 
   const getWeatherByCityId = async () => {
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0d8a28b31f4a48f9cd37b87720e0d330&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0d8a28b31f4a48f9cd37b87720e0d330&units=metric`;
     try {
       let response = await fetch(url);
       let data = await response.json();
