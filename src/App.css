@@ -15,13 +15,13 @@ body {
 }
 
 .main.sunny {
-  background-image: url("./clear sky.jpg");
+  background-image: url("./clear_sky.jpg");
 }
 .main.fewCloudy {
-  background-image: url("./few clouds.jpg");
+  background-image: url("./few_clouds.jpg");
 }
 .main.cloudy {
-  background-image: url("./broken clouds.jpg");
+  background-image: url("./broken_clouds.jpg");
 }
 .main.rainy {
   background-image: url("./rain.jpg");
