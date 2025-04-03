@@ -1,16 +1,80 @@
 .box {
-  border: 1px solid white;
-  border-radius: 10px;
-  width: 400px;
-  height: 200px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
-.box p,
-.box h2,
+/* 마우스를 올렸을 때 약간의 입체감 효과 */
+.box:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+.weatherInfoMain {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 130px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 제목 스타일 */
+.box h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
 .box h3 {
-  margin: 2px 0; /* 요소 간 최소한의 간격 */
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* 본문 스타일 */
+.box p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    width: 200px;
+  }
+  .box h3 {
+    font-size: 14px;
+  }
+  .weatherInfoMain {
+    flex-direction: column;
+    align-items: center;
+  }
+  .weatherInfo {
+    width: 200px;
+  }
 }

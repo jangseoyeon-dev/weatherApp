@@ -1,47 +1,30 @@
 import React from "react";
 import Button from "../Button";
 
-function index() {
+function Index({ citis, handleCityChange, selectedCity }) {
   return (
     <div className="buttons">
       <Button
-        variant="outline"
+        variant={selectedCity === null ? "outline" : ""}
         onClick={() => {
-          console.log("Current Location");
+          handleCityChange("current");
         }}
       >
         Current Location
       </Button>
-      <Button
-        onClick={() => {
-          console.log("hanoi");
-        }}
-      >
-        hanoi
-      </Button>
-      <Button
-        onClick={() => {
-          console.log("paris");
-        }}
-      >
-        paris
-      </Button>
-      <Button
-        onClick={() => {
-          console.log("new york");
-        }}
-      >
-        new york
-      </Button>
-      <Button
-        onClick={() => {
-          console.log("seoul");
-        }}
-      >
-        seoul
-      </Button>
+      {citis.map((city) => (
+        <Button
+          variant={selectedCity === city ? "outline" : ""}
+          key={city}
+          onClick={() => {
+            handleCityChange(city);
+          }}
+        >
+          {city}
+        </Button>
+      ))}
     </div>
   );
 }
 
-export default index;
+export default Index;

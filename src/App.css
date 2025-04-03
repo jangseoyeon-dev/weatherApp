@@ -1,3 +1,38 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.main.sunny {
+  background-image: url("./clear sky.jpg");
+}
+.main.fewCloudy {
+  background-image: url("./few clouds.jpg");
+}
+.main.cloudy {
+  background-image: url("./broken clouds.jpg");
+}
+.main.rainy {
+  background-image: url("./rain.jpg");
+}
+.main.thunderstorm {
+  background-image: url("./thunderstorm.jpg");
+}
+.main.snow {
+  background-image: url("./snow.jpg");
+}
+
 .buttons {
   padding: 10px;
   margin-top: 10px;
