@@ -27,20 +27,24 @@ const WeatherBox = ({ weather }) => {
       <p>{weather?.name}</p>
       <h1>{Math.floor(weather?.main.temp * 100) / 100} °C </h1>
       <p>{Math.floor((weather?.main.temp * 1.8 + 32) * 100) / 100} °F</p>
+      <p>{weather?.weather[0].description}</p>
       <h3 style={{ marginBottom: "20px" }}>
         최고: {Math.floor(weather?.main.temp_max * 100) / 100} °C / 최저:
         {Math.floor(weather?.main.temp_min * 100) / 100} °C
       </h3>
       <div className={styles.weatherInfoMain}>
         <div className={styles.weatherInfo}>
+          <p>체감 온도</p>
           <p style={{ fontSize: "30px" }}>🌡</p>
           <p>{weather?.main.feels_like}°C</p>
         </div>
         <div className={styles.weatherInfo}>
+          <p>습도</p>
           <p style={{ fontSize: "30px" }}>💧</p>
           <p>{weather?.main.humidity}%</p>
         </div>
         <div className={styles.weatherInfo}>
+          <p>바람</p>
           <p style={{ fontSize: "30px" }}>💨</p>
           <p>
             {deg} / {weather?.wind.speed}

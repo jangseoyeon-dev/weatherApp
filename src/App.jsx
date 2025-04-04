@@ -68,7 +68,11 @@ function App() {
   const handleBackgroundChange = (weather) => {
     if (weather === "clear sky") {
       setWeatherDescription("sunny");
-    } else if (weather === "few clouds" || weather === "mist") {
+    } else if (
+      weather === "few clouds" ||
+      weather === "mist" ||
+      weather === "haze"
+    ) {
       setWeatherDescription("fewCloudy");
     } else if (weather === "scattered clouds" || weather === "broken clouds") {
       setWeatherDescription("cloudy");
