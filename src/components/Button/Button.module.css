@@ -21,4 +21,8 @@
   color: black;
 }
 
-/* 버튼 클릭한 값 표시 */
+@media screen and (max-width: 600px) {
+  .btn {
+    padding: 5px;
+  }
+}
